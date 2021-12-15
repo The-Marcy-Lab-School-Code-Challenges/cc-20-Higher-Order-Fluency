@@ -12,7 +12,7 @@
 
 **All the following problems can be solved using a higher order array method. You cannot use .forEach() to solve the following problems.** 
 
-**Test all your solutions for questions 1-5 with the following variable:** 
+**Test all your solutions for the questions with the following variable:** 
 
 ```jsx
 const alumni = [
@@ -24,12 +24,80 @@ const alumni = [
 {name:'Cielo', job:'NYT',language:'JavaScript', age:21}]
 ```
 
-1. Write a function named `averageAge` that takes an array of objects and returns the average of all the ages from each age property in each object rounded to the nearest whole number. 
+1. Write a function named `oddJob` that takes an array of objects and returns an array of objects if the job length is an odd number. 
+    
+    ```jsx
+    oddJob(alumni) //returns [
+      { name: 'Jarrit', job: 'TPT', language: 'JavaScript', age: 22 },
+      { name: 'Enmanuel', job: 'Asana', language: 'JavaScript', age: 21 },
+      {
+        name: 'Shemar',
+        job: 'SquareSpace',
+        language: 'JavaScript',
+        age: 23
+      },
+      { name: 'Cielo', job: 'NYT', language: 'JavaScript', age: 21 }
+    ]
+    ```
+2. Write a function named `birthYear` that takes an array of objects and returns an array of objects with a new property called birth year and the value containing the year they were born. You may assume the year is 2021. 
+    
+    ```jsx
+    birthYear(alumni) // returns [
+      {
+        name: 'Jarrit',
+        job: 'TPT',
+        language: 'JavaScript',
+        age: 22,
+        birthYear: 1999
+      }...
+    ]
+    ```
+3. Write a function named `updateLanguage` that takes an array of objects and updates the language value to ES6 if the language is JavaScript, return the entire object. 
+    
+    ```jsx
+    updateLanguage(alumni) // [
+      { name: 'Jarrit', job: 'TPT', language: 'ES6', age: 22 },
+      { name: 'Stephanie', job: 'JPMorgan', language: 'ES6', age: 21 },
+      { name: 'Devonte', job: 'WW', language: 'ES6', age: 23 },
+      { name: 'Enmanuel', job: 'Asana', language: 'ES6', age: 21 },
+      { name: 'Shemar', job: 'SquareSpace', language: 'ES6', age: 23 },
+      { name: 'Cielo', job: 'NYT', language: 'ES6', age: 21 }
+    ]
+    ```
+4. Write a function named `orderedAlumni` that takes an array of objects and sorts the objects by the age of the alumni from oldest to youngest. 
+    
+    ```jsx
+    orderedAlumni(alumni) // returns [
+      { name: 'Devonte', job: 'WW', language: 'JavaScript', age: 23 },
+      {
+        name: 'Shemar',
+        job: 'SquareSpace',
+        language: 'JavaScript',
+        age: 23
+      },
+      { name: 'Jarrit', job: 'TPT', language: 'JavaScript', age: 22 },
+      {
+        name: 'Stephanie',
+        job: 'JPMorgan',
+        language: 'JavaScript',
+        age: 21
+      },
+      { name: 'Enmanuel', job: 'Asana', language: 'JavaScript', age: 21 },
+      { name: 'Cielo', job: 'NYT', language: 'JavaScript', age: 21 }
+    ]
+    ```
+5. Write a function named `orderedByJob` that takes an array of objects and sorts the alumni in alphabetical order based on their job property, return an array of the alphabetized job. 
+    
+    ```jsx
+    orderedByJob(alumni) // returns [ 'Asana', 'JPMorgan', 'NYT', 'SquareSpace', 'TPT', 'WW' ]
+    ```
+
+6. Write a function named `averageAge` that takes an array of objects and returns the average of all the ages from each age property in each object rounded to the nearest whole number. 
     
     ```jsx
     averageAge(alumni) // 21
     ```
-2. Write a function named /`bananaBread` that takes an array of objects and returns an array of the same objects with a new property named bananaBread that has a value of a string using the name and job properties of each object. 
+7. Write a function named /`bananaBread` that takes an array of objects and returns an array of the same objects with a new property named bananaBread that has a value of a string using the name and job properties of each object. 
     
     ```jsx
     bananaBread(alumni) // returns [
@@ -48,7 +116,7 @@ const alumni = [
         bananaBread: 'Stephanie got banana bread at JPMorgan'
       }...] 
     ```
- 3. Write a function named `ninetiesBabies` that takes an array of objects and returns an array of only the objects where the age property is larger than 21.
+ 8. Write a function named `ninetiesBabies` that takes an array of objects and returns an array of only the objects where the age property is larger than 21.
     
     ```jsx
     ninetiesBabies(alumni) // returns [
@@ -57,7 +125,7 @@ const alumni = [
       { name: 'Shemar', job: 'SquareSpace', language: 'JavaScript', age: 23 }
     ]
     ```
-4. Write a function named `addSchool` that takes an array of objects and returns a new array where a property of 'school', and value of 'The Marcy Lab School' is added to each object.
+9. Write a function named `addSchool` that takes an array of objects and returns a new array where a property of 'school', and value of 'The Marcy Lab School' is added to each object.
     
     ```jsx
     addSchool(alumni) // returns [
@@ -67,42 +135,8 @@ const alumni = [
       ...
     ]
     ```
- 5. Write a function named `allUseJavaScript` that takes an array of objects and returns a boolean if for every object, the language property is 'JavaScript'.
+ 10. Write a function named `allUseJavaScript` that takes an array of objects and returns a boolean if for every object, the language property is 'JavaScript'.
     
     ```jsx
     allUseJavaScript(alumni) // returns true
-    ```
-
-**Test all your solutions for questions 6-10 with the following variable:** 
-
-` const animals =['cheetah','dog', 'cat', 'dodobird', 'bear', 'dolphin'] `
-    
-6. Write a function named `noVowel` that takes an array of strings and returns an array of strings where all of the vowels have been turned into an x. 
-    
-    ```jsx
-    noVowel(animals) // ['chxxtxh', 'dxg', 'cxt', 'dxdxbxrd', 'bxxr','dxlphxn']
-    ```
-    
-7. Write a function named `onlyVowelA` that takes an array of strings and only returns the strings that contain the vowel a. 
-    
-    ```jsx
-    onlyVowelA(animals) // ['cheetah', 'cat','bear']
-    ```
-    
-8. Write a function named `longerThanSeven` that takes an array of strings and returns true if at least one of the strings in the array has a length longer than 7. 
-    
-    ```jsx
-    longerThanSeven(animals) // true 
-    ```
-    
-9. Write a function named `allFour` that takes an array of strings and returns true if all of the strings are a length of 4. 
-    
-    ```jsx
-    allFour(animals) // false
-    ```
-    
-10. Write a function named `concatStrings` that takes an array of words and returns a sentence (single string) with all the element strings concatenated together
-    
-    ```jsx
-    concatStrings(animals) // "cheetah dog cat dodobird bear dolphin"
     ```

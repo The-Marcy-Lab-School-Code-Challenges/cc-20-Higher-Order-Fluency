@@ -39,16 +39,16 @@ const alumni = [
       { name: 'Cielo', job: 'NYT', language: 'JavaScript', age: 21 }
     ]
     ```
-2. Write a function named `birthYear` that takes an array of objects and returns an array of objects with a new property called birth year and the value containing the year they were born. You may assume the year is 2021. 
+2. Write a function named `birthYear` that takes an array of objects and returns an array of objects with a new property called birth year and the value containing the year they were born. You may assume the year is 2022. 
     
     ```jsx
     birthYear(alumni) // returns [
       {
-        name: 'Jarrit',
-        job: 'TPT',
+        name: 'Cielo',
+        job: 'NYT',
         language: 'JavaScript',
         age: 22,
-        birthYear: 1999
+        birthYear: 2001
       }...
     ]
     ```
